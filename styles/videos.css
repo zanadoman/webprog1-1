@@ -1,0 +1,61 @@
+:root
+{
+    --primary-color: rgb(26, 9, 54);
+    --secondary-color: rgb(162, 146, 192);
+}
+
+.video
+{
+    margin: 0.5vw 0 0.5vw 0;
+    text-align: center;
+    width: 40vw;
+}
+.video h1
+{
+    font-size: 2vw;
+    color: var(--secondary-color);
+    margin: 1.2vw 0 0.9vw 0;
+}
+.video iframe
+{
+    width: 40vw;
+    aspect-ratio: 16 / 9;
+    border-radius: 0.5vw;
+    box-shadow: 0 0.2vw 0.2vw 0 rgba(0, 0, 0, 0.5);
+}
+.video p
+{
+    color: var(--secondary-color);
+    font-size: 1vw;
+    margin: 0.5vw 0 1vw 0;
+}
+
+.buttons
+{
+    text-align: center;
+    width: 20vw;
+}
+.buttons button
+{
+    width: 5vw;
+    height: 2vw;
+    font-size: 0.9vw;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    box-shadow: 0 0.2vw 0.2vw 0 rgba(0, 0, 0, 0.5);
+}
+.buttons button:hover
+{
+    border: 1px solid white;
+    background-color: var(--primary-color);
+}
+
+#p1:not(:target)
+{
+    display: none;
+}
+#p2:not(:target)
+{
+    display: none;
+}

@@ -1,0 +1,43 @@
+:root
+{
+    --primary-color: rgb(26, 9, 54);
+    --secondary-color: rgb(162, 146, 192);
+}
+
+.calendar
+{
+    width: 52vw;
+    overflow: hidden;
+    border-radius: 0.5vw;
+    margin: 0;
+    caption-side: top;
+    box-shadow: 0 0.3vw 0.3vw 0 rgba(0, 0, 0, 0.5);
+}
+.calendar .overflow
+{
+    background-color: rgb(71, 71, 71);
+    color: rgb(209, 32, 32);
+}
+.calendar caption
+{
+    font-size: 1.8vw;
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+    text-align: center;
+    text-decoration: underline;
+}
+.calendar th
+{
+    font-size: 1.5vw;
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+    text-align: center;
+}
+.calendar td
+{
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+    margin: 0.5vw 0 0.5vw 0;
+    font-size: 1.2vw;
+    text-align: center;
+}

@@ -1,0 +1,121 @@
+:root
+{
+    --primary-color: rgb(26, 9, 54);
+    --secondary-color: rgb(162, 146, 192);
+}
+
+.introduction
+{
+    background-color: var(--primary-color);
+    color: white;
+    box-shadow: 0 0.2vw 0.2vw 0 rgba(0, 0, 0, 0.5);
+}
+.introduction h1
+{
+    color: white;
+    font-size: 2vw;
+    text-align: center;
+    margin: 0.4vw 0 0.4vw 0;
+}
+.introduction li
+{
+    color: white;
+    font-size: 0.7vw;
+    margin: 0.4vw 0 0.4vw 0;
+}
+.introduction hr
+{
+    width: 39.5vw;
+    margin: 0 0 0.4vw 0;
+    opacity: 0.5;
+    border-bottom: 0.2vw solid white;
+}
+.introduction a
+{
+    color: white;
+}
+.introduction a:hover
+{
+    color: var(--secondary-color)
+}
+
+.cv-grid1
+{
+    display: grid;
+    width: 45vw;
+    color: var(--secondary-color)
+}
+.cv-grid1 h1
+{
+    font-size: 1.5vw;
+    font-weight: bold;
+    margin: 0.4vw 0 0.4vw 0;
+    text-align: center;
+}
+.cv-grid1 h2
+{
+    font-size: 1.2vw;
+    font-weight: bold;
+    margin: 0.4vw 0 0.4vw 0;
+}
+.cv-grid1 p
+{
+    font-size: 0.9vw;
+    margin: 0.4vw 0 0.4vw 0;
+}
+.cv-grid1 .title
+{
+    margin: 0 0 0.5vw 0;
+    border-bottom: 0.15vw solid var(--secondary-color)
+}
+.cv-grid1 .date
+{
+    margin: 0 0.5vw 0 0;
+    border-right: 1px solid var(--secondary-color)
+}
+.cv-grid1 .study
+{
+    border-bottom: 1px solid var(--secondary-color)
+}
+
+.cv-grid2
+{
+    width: 45vw;
+    color: var(--secondary-color)
+}
+.cv-grid2 h1
+{
+    font-size: 1.5vw;
+    font-weight: bold;
+    margin: 0.4vw 0 0.4vw 0;
+    text-align: center;
+}
+.cv-grid2 li
+{
+    font-size: 0.9vw;
+    margin: 0.1vw 0 0.1vw 0;
+}
+.cv-grid2 .title
+{
+    margin-bottom: 0.5vw;
+    border-bottom: 0.15vw solid var(--secondary-color)
+}
+
+.download
+{
+    height: 2vw;
+    width: 9vw;
+    color: white;
+    background-color: var(--primary-color);
+    border: none;
+    box-shadow: 0 0.2vw 0.2vw 0 rgba(0, 0, 0, 0.5);
+}
+.download:hover
+{
+    background-color: var(--primary-color);
+    border: 1px solid white;
+}
+.download b
+{
+    font-size: 0.8vw;
+}

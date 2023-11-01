@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sakktábla</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/chess.css">
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <header>
+        <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Önéletrajz</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="index.html">Önéletrajz</a></li>
+                                <li><a class="dropdown-item" href="index.html#studies">Tanulmányok</a></li>
+                                <li><a class="dropdown-item" href="index.html#skills">Készségek</a></li>
+                                <li><a class="dropdown-item" href="index.html#other">További információk</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="timetable.html">Órarend</a></li>
+                        <li class="nav-item"><a class="nav-link" href="calendar.html">Naptár</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pictures.html">Képgaléria</a></li>
+                        <li class="nav-item"><a class="nav-link" href="videos.html#p1">Videógyűjtemény</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="chess.html">Sakktábla</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <table class="chess">
+            <tbody>
+                <tr>
+                    <th class="brownLight"></th>
+                    <th class="brownLight"></th>
+                    <th class="brownLight"></th>
+                    <th class="brownLight"></th>
+                    <th class="brownLight"></th>
+                    <th class="brownLight"></th>
+                    <th class="brownLight"></th>
+                    <th class="brownLight"></th>
+                    <th class="brownLight"></th>
+                    <th class="brownLight"></th>
+                    <th class="brownLight"></th>
+                    <th class="brownLight"></th>
+                    <th class="brownLight"></th>
+                    <th class="brownLight"></th>
+                </tr>
+                <tr>
+                    <th class="brownLight"></th>
+                    <th class="tile brownDark"></th>
+                    <th class="brownDark"></th>
+                    <th class="tile brownDark"><p class="flipped">H</p></th>
+                    <th class="tile brownDark"><p class="flipped">G</p></th>
+                    <th class="tile brownDark"><p class="flipped">F</p></th>
+                    <th class="tile brownDark"><p class="flipped">E</p></th>
+                    <th class="tile brownDark"><p class="flipped">D</p></th>
+                    <th class="tile brownDark"><p class="flipped">C</p></th>
+                    <th class="tile brownDark"><p class="flipped">B</p></th>
+                    <th class="tile brownDark"><p class="flipped">A</p></th>
+                    <th class="brownDark"></th>
+                    <th class="tile brownDark"></th>
+                    <th class="brownLight"></th>
+                </tr>
+                <tr>
+                    <th class="brownLight"></th>
+                    <th class="brownDark"></th>
+                    <th class="brownLight"></th>
+                    <th class="brownLight"></th>
+                    <th class="brownLight"></th>
+                    <th class="brownLight"></th>
+                    <th class="brownLight"></th>
+                    <th class="brownLight"></th>
+                    <th class="brownLight"></th>
+                    <th class="brownLight"></th>
+                    <th class="brownLight"></th>
+                    <th class="brownLight"></th>
+                    <th class="brownDark"></th>
+                    <th class="brownLight"></th>
+                </tr>
+                <tr>
+                    <th class="brownLight"></th>
+                    <th class="tile brownDark"><p>8</p></th>
+                    <th class="brownLight"></th>
+                    <th class="tile black"><img src="assets/chess/rook_black.png" class="rook" alt="Sötét Bástya"></th>
+                    <th class="tile white"><img src="assets/chess/knight_black.png" class="knight" alt="Sötét Csikó"></th>
+                    <th class="tile black"><img src="assets/chess/futo_fekete.png" class="bishop" alt="Sötét Futó"></th>
+                    <th class="tile white"><img src="assets/chess/queen_black.jpg" class="queen" alt="Sötét Vezér"></th>
+                    <th class="tile black"><img src="assets/chess/black_king.png" class="king" alt="Sötét Király"></th>
+                    <th class="tile white"><img src="assets/chess/futo_fekete.png" class="bishop" alt="Sötét Futó"></th>
+                    <th class="tile black"><img src="assets/chess/knight_black.png" class="knight" alt="Sötét Csikó"></th>
+                    <th class="tile white"><img src="assets/chess/rook_black.png" class="rook" alt="Sötét Bástya"></th>
+                    <th class="brownLight"></th>
+                    <th class="tile brownDark"><p class="flipped">1</p></th>
+                    <th class="brownLight"></th>
+                </tr>
+                <tr>
+                    <th class="brownLight"></th>
+                    <th class="tile brownDark"><p>7</p></th>
+                    <th class="brownLight"></th>
+                    <th class="tile white"><img src="assets/chess/pawn_black.png" class="pawn" alt="Sötét Gyalog"></th>
+                    <th class="tile black"><img src="assets/chess/pawn_black.png" class="pawn" alt="Sötét Gyalog"></th>
+                    <th class="tile white"><img src="assets/chess/pawn_black.png" class="pawn" alt="Sötét Gyalog"></th>
+                    <th class="tile black"><img src="assets/chess/pawn_black.png" class="pawn" alt="Sötét Gyalog"></th>
+                    <th class="tile white"><img src="assets/chess/pawn_black.png" class="pawn" alt="Sötét Gyalog"></th>
+                    <th class="tile black"><img src="assets/chess/pawn_black.png" class="pawn" alt="Sötét Gyalog"></th>
+                    <th class="tile white"><img src="assets/chess/pawn_black.png" class="pawn" alt="Sötét Gyalog"></th>
+                    <th class="tile black"><img src="assets/chess/pawn_black.png" class="pawn" alt="Sötét Gyalog"></th>
+                    <th class="brownLight"></th>
+                    <th class="tile brownDark"><p class="flipped">2</p></th>
+                    <th class="brownLight"></th>
+                </tr>
+                <tr>
+                    <th class="brownLight"></th>
+                    <th class="tile brownDark"><p>6</p></th>
+                    <th class="brownLight"></th>
+                    <th class="tile black"></th>
+                    <th class="tile white"></th>
+                    <th class="tile black"></th>
+                    <th class="tile white"></th>
+                    <th class="tile black"></th>
+                    <th class="tile white"></th>
+                    <th class="tile black"></th>
+                    <th class="tile white"></th>
+                    <th class="brownLight"></th>
+                    <th class="tile brownDark"><p class="flipped">3</p></th>
+                    <th class="brownLight"></th>
+                </tr>
+                <tr>
+                    <th class="brownLight"></th>
+                    <th class="tile brownDark"><p>5</p></th>
+                    <th class="brownLight"></th>
+                    <th class="tile white"></th>
+                    <th class="tile black"></th>
+                    <th class="tile white"></th>
+                    <th class="tile black"></th>
+                    <th class="tile white"></th>
+                    <th class="tile black"></th>
+                    <th class="tile white"></th>
+                    <th class="tile black"></th>
+                    <th class="brownLight"></th>
+                    <th class="tile brownDark"><p class="flipped">4</p></th>
+                    <th class="brownLight"></th>
+                </tr>
+                <tr>
+                    <th class="brownLight"></th>
+                    <th class="tile brownDark"><p>4</p></th>
+                    <th class="brownLight"></th>
+                    <th class="tile black"></th>
+                    <th class="tile white"></th>
+                    <th class="tile black"></th>
+                    <th class="tile white"></th>
+                    <th class="tile black"></th>
+                    <th class="tile white"></th>
+                    <th class="tile black"></th>
+                    <th class="tile white"></th>
+                    <th class="brownLight"></th>
+                    <th class="tile brownDark"><p class="flipped">5</p></th>
+                    <th class="brownLight"></th>
+                </tr>
+                <tr>
+                    <th class="brownLight"></th>
+                    <th class="tile brownDark"><p>3</p></th>
+                    <th class="brownLight"></th>
+                    <th class="tile white"></th>
+                    <th class="tile black"></th>
+                    <th class="tile white"></th>
+                    <th class="tile black"></th>
+                    <th class="tile white"></th>
+                    <th class="tile black"></th>
+                    <th class="tile white"></th>
+                    <th class="tile black"></th>
+                    <th class="brownLight"></th>
+                    <th class="tile brownDark"><p class="flipped">6</p></th>
+                    <th class="brownLight"></th>
+                </tr>
+                <tr>
+                    <th class="brownLight"></th>
+                    <th class="tile brownDark"><p>2</p></th>
+                    <th class="brownLight"></th>
+                    <th class="tile black"><img src="assets/chess/pawn_white.png" class="pawn" alt="Világos Gyalog"></th>
+                    <th class="tile white"><img src="assets/chess/pawn_white.png" class="pawn" alt="Világos Gyalog"></th>
+                    <th class="tile black"><img src="assets/chess/pawn_white.png" class="pawn" alt="Világos Gyalog"></th>
+                    <th class="tile white"><img src="assets/chess/pawn_white.png" class="pawn" alt="Világos Gyalog"></th>
+                    <th class="tile black"><img src="assets/chess/pawn_white.png" class="pawn" alt="Világos Gyalog"></th>
+                    <th class="tile white"><img src="assets/chess/pawn_white.png" class="pawn" alt="Világos Gyalog"></th>
+                    <th class="tile black"><img src="assets/chess/pawn_white.png" class="pawn" alt="Világos Gyalog"></th>
+                    <th class="tile white"><img src="assets/chess/pawn_white.png" class="pawn" alt="Világos Gyalog"></th>
+                    <th class="brownLight"></th>
+                    <th class="tile brownDark"><p class="flipped">7</p></th>
+                    <th class="brownLight"></th>
+                </tr>
+                <tr>
+                    <th class="brownLight"></th>
+                    <th class="tile brownDark"><p>1</p></th>
+                    <th class="brownLight"></th>
+                    <th class="tile white"><img src="assets/chess/rook_white.png" class="rook" alt="Világos Bástya"></th>
+                    <th class="tile black"><img src="assets/chess/knight_white.png" class="knight" alt="Világos Csikó"></th>
+                    <th class="tile white"><img src="assets/chess/futo_feher.png" class="bishop" alt="Világos Futó"></th>
+                    <th class="tile black"><img src="assets/chess/white_king.png" class="king" alt="Világos Király"></th>
+                    <th class="tile white"><img src="assets/chess/queen_white.png" class="queen" alt="Világos Vezér"></th>
+                    <th class="tile black"><img src="assets/chess/futo_feher.png" class="bishop" alt="Világos Futó"></th>
+                    <th class="tile white"><img src="assets/chess/knight_white.png" class="knight" alt="Világos Csikó"></th>
+                    <th class="tile black"><img src="assets/chess/rook_white.png" class="rook" alt="Világos Bástya"></th>
+                    <th class="brownLight"></th>
+                    <th class="tile brownDark"><p class="flipped">8</p></th>
+                    <th class="brownLight"></th>
+                </tr>
+                <tr>
+                    <th class="brownLight"></th>
+                    <th class="brownDark"></th>
+                    <th class="brownLight"></th>
+                    <th class="brownLight"></th>
+                    <th class="brownLight"></th>
+                    <th class="brownLight"></th>
+                    <th class="brownLight"></th>
+                    <th class="brownLight"></th>
+                    <th class="brownLight"></th>
+                    <th class="brownLight"></th>
+                    <th class="brownLight"></th>
+                    <th class="brownLight"></th>
+                    <th class="brownDark"></th>
+                    <th class="brownLight"></th>
+                </tr>
+                <tr>
+                    <th class="brownLight"></th>
+                    <th class="tile brownDark"></th>
+                    <th class="brownDark"></th>
+                    <th class="tile brownDark"><p>A</p></th>
+                    <th class="tile brownDark"><p>B</p></th>
+                    <th class="tile brownDark"><p>C</p></th>
+                    <th class="tile brownDark"><p>D</p></th>
+                    <th class="tile brownDark"><p>E</p></th>
+                    <th class="tile brownDark"><p>F</p></th>
+                    <th class="tile brownDark"><p>G</p></th>
+                    <th class="tile brownDark"><p>H</p></th>
+                    <th class="brownDark"></th>
+                    <th class="tile brownDark"></th>
+                    <th class="brownLight"></th>
+                </tr>
+                <tr>
+                    <th class="brownLight"></th>
+                    <th class="brownLight"></th>
+                    <th class="brownLight"></th>
+                    <th class="brownLight"></th>
+                    <th class="brownLight"></th>
+                    <th class="brownLight"></th>
+                    <th class="brownLight"></th>
+                    <th class="brownLight"></th>
+                    <th class="brownLight"></th>
+                    <th class="brownLight"></th>
+                    <th class="brownLight"></th>
+                    <th class="brownLight"></th>
+                    <th class="brownLight"></th>
+                    <th class="brownLight"></th>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+    <footer>
+        <div class="container footer-grid">
+            <div class="row">
+                <div class="col center" style="flex-direction: column;">
+                    <p>Készítette: Zana Domán</p>
+                    <ul>
+                        <li>Neptun kód: Z17V4D</li>
+                        <li>E-mail: domanseven@gmail.com</li>
+                    </ul>
+                </div>
+                <div class="col center" style="flex-direction: column;">
+                    <p>Egyéb projektek:</p>
+                    <ul>
+                        <li><a href="http://www.sentinelpi.hu" target="_blank">Weboldal/MC modpackok</a></li>
+                        <li><a href="https://github.com/zanadoman" target="_blank">GitHub</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

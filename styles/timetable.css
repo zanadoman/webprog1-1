@@ -1,0 +1,52 @@
+:root
+{
+    --primary-color: rgb(26, 9, 54);
+    --secondary-color: rgb(162, 146, 192);
+}
+
+main
+{
+    height: 30vw;
+}
+
+.timetable
+{
+    width: 52vw;
+}
+.timetable h1
+{
+    font-size: 2vw;
+    color: var(--secondary-color);
+    text-align: center;
+}
+
+.subject button
+{
+    background-color: var(--primary-color);
+    width: 9vw;
+    height: 3vw;
+    margin: 0.5vw 0 0.5vw 0;
+    font-size: 0.8vw;
+    border: none;
+    box-shadow: 0 0.2vw 0.2vw 0 rgba(0, 0, 0, 0.5);
+}
+.subject button:hover
+{
+    border: 1px solid white;
+    background-color: var(--primary-color);
+}
+.subject .btn.btn-secondary.dropdown-toggle.show
+{
+    border: 1px solid var(--secondary-color);
+    background-color: var(--primary-color);
+}
+.subject .disabled
+{
+    opacity: 0.3;
+}
+.subject .dropdown-menu
+{
+    width: 9vw;
+    text-align: center;
+    font-size: 0.8vw;
+}

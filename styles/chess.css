@@ -1,0 +1,75 @@
+main
+{
+    height: 55vw;
+}
+
+.chess
+{
+    width: 52vw;
+    height: 52vw;
+    box-shadow: 0 0.3vw 0.3vw 0 rgba(0, 0, 0, 0.5);
+}
+.chess .tile
+{
+    width: 5vw;
+    height: 5vw;
+
+    text-align: center;
+}
+.chess .chessPiece
+{
+    width: 3vw;
+}
+.chess .white
+{
+    background-color: rgb(240, 228, 220);
+}
+.chess .black
+{
+    background-color: rgb(32, 12, 12);
+}
+.chess .brownLight
+{
+    background-color: rgb(184, 132, 100);
+}
+.chess .brownDark
+{
+    background-color: rgb(72, 36, 12);
+}
+.chess .pawn
+{
+    height: 3.4vw;
+}
+.chess .rook
+{
+    height: 4.2vw;
+}
+.chess .knight
+{
+    height: 3.1vw;
+}
+.chess .bishop
+{
+    height: 3.9vw;
+}
+.chess .queen
+{
+    height: 3.3vw;
+}
+.chess .king
+{
+    height: 2.9vw;
+}
+.chess p
+{
+    text-align: center;
+    font-weight: bold;
+    font-size: 2.5vw;
+    margin: 0;
+    color: rgb(240, 228, 220);
+    font-family: Roboto;
+}
+.chess .flipped
+{
+    transform: rotate(180deg);
+}

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Órarend</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/timetable.css">
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <header>
+        <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Önéletrajz</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="index.html">Önéletrajz</a></li>
+                                <li><a class="dropdown-item" href="index.html#studies">Tanulmányok</a></li>
+                                <li><a class="dropdown-item" href="index.html#skills">Készségek</a></li>
+                                <li><a class="dropdown-item" href="index.html#other">További információk</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link active" href="timetable.html">Órarend</a></li>
+                        <li class="nav-item"><a class="nav-link" href="calendar.html">Naptár</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pictures.html">Képgaléria</a></li>
+                        <li class="nav-item"><a class="nav-link" href="videos.html#p1">Videógyűjtemény</a></li>
+                        <li class="nav-item"><a class="nav-link" href="chess.html">Sakktábla</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <br>
+        <div class="container timetable">
+            <div class="row">
+                <div class="col">
+                    <h1>Hétfő</h1>
+                </div>
+                <div class="col">
+                    <h1>Kedd</h1>
+                </div>
+                <div class="col">
+                    <h1>Szerda</h1>
+                </div>
+                <div class="col">
+                    <h1>Csütörtök</h1>
+                </div>
+                <div class="col">
+                    <h1>Péntek</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="dropdown subject" data-bs-theme="dark">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" title="Bevezetés az informatikába gyakorlat">Bev. info. gy.</button>
+                        <ul class="dropdown-menu">
+                            <li>08:00-09:40</li>
+                            <li>C. I. 110.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="dropdown subject" data-bs-theme="dark">
+                        <button class="btn btn-secondary dropdown-toggle disabled" type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                        <ul class="dropdown-menu">
+                        </ul>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="dropdown subject" data-bs-theme="dark">
+                        <button class="btn btn-secondary dropdown-toggle disabled" type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                        <ul class="dropdown-menu">
+                        </ul>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="dropdown subject" data-bs-theme="dark">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" title="Számítógépes rendszerek előadás">Sz.gép rendsz. ea.</button>
+                        <ul class="dropdown-menu">
+                            <li>08:00-09:40</li>
+                            <li>C. I. 124.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="dropdown subject" data-bs-theme="dark">
+                        <button class="btn btn-secondary dropdown-toggle disabled" type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                        <ul class="dropdown-menu">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="dropdown subject" data-bs-theme="dark">
+                        <button class="btn btn-secondary dropdown-toggle disabled" type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                        <ul class="dropdown-menu">
+                        </ul>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="dropdown subject" data-bs-theme="dark">
+                        <button class="btn btn-secondary dropdown-toggle disabled" type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                        <ul class="dropdown-menu">
+                        </ul>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="dropdown subject" data-bs-theme="dark">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" title="Magasszintű programozási nyelvek I. gyakorlat">Mag. Prog. I. gy.</button>
+                        <ul class="dropdown-menu">
+                            <li>10:00-11:40</li>
+                            <li>C. II. 206.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="dropdown subject" data-bs-theme="dark">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" title="Információs és kommunikációs technológiák gyakorlat">IKT. gy.</button>
+                        <ul class="dropdown-menu">
+                            <li>10:00-11:40</li>
+                            <li>C*. 1.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="dropdown subject" data-bs-theme="dark">
+                        <button class="btn btn-secondary dropdown-toggle disabled" type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                        <ul class="dropdown-menu">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="dropdown subject" data-bs-theme="dark">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" title="Bevezetés az informatikába előadás">Bev. info. ea.</button>
+                        <ul class="dropdown-menu">
+                            <li>11:50-13:30</li>
+                            <li>C. I. 124.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="dropdown subject" data-bs-theme="dark">
+                        <button class="btn btn-secondary dropdown-toggle disabled" type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                        <ul class="dropdown-menu">
+                        </ul>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="dropdown subject" data-bs-theme="dark">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" title="Webprogramozás I. gyakorlat">Webprog I. gy.</button>
+                        <ul class="dropdown-menu">
+                            <li>11:50-13:30</li>
+                            <li>C. II. 206.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="dropdown subject" data-bs-theme="dark">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" title="Munkaerőpiaci ismeretek előadás">Munkaerő. ism. ea.</button>
+                        <ul class="dropdown-menu">
+                            <li>11:50-13:30</li>
+                            <li>B. I. 121.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="dropdown subject" data-bs-theme="dark">
+                        <button class="btn btn-secondary dropdown-toggle disabled" type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                        <ul class="dropdown-menu">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="dropdown subject" data-bs-theme="dark">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" title="Magasszintű programozási nyelvek I. előadás">Mag. Prog. I. ea.</button>
+                        <ul class="dropdown-menu">
+                            <li>13:40-15:20</li>
+                            <li>C. I. 124.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="dropdown subject" data-bs-theme="dark">
+                        <button class="btn btn-secondary dropdown-toggle disabled" type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                        <ul class="dropdown-menu">
+                        </ul>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="dropdown subject" data-bs-theme="dark">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" title="Digitális tartalmak gyakorlat">Digit. tartalmak gy.</button>
+                        <ul class="dropdown-menu">
+                            <li>13:40-15:20</li>
+                            <li>C*. 5.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="dropdown subject" data-bs-theme="dark">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" title="A programozás módszertani alapjai gyakorlat">Prog. mod. gy.</button>
+                        <ul class="dropdown-menu">
+                            <li>13:40-15:20</li>
+                            <li>C. I. 108.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="dropdown subject" data-bs-theme="dark">
+                        <button class="btn btn-secondary dropdown-toggle disabled" type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                        <ul class="dropdown-menu">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="dropdown subject" data-bs-theme="dark">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" title="Magasszintű programozási nyelvek I. gyakorlat">Mag. Prog. I. gy.</button>
+                        <ul class="dropdown-menu">
+                            <li>15:30-17:10</li>
+                            <li>C. I. 110.</li>
+                            <li></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="dropdown subject" data-bs-theme="dark">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" title="Bevezetés a kommunikáció elméletbe előadás">Kommunikáció ea.</button>
+                        <ul class="dropdown-menu">
+                            <li>15:30-17:10</li>
+                            <li>C*. 1.</li>
+                            <li></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="dropdown subject" data-bs-theme="dark">
+                        <button class="btn btn-secondary dropdown-toggle disabled" type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                        <ul class="dropdown-menu">
+                        </ul>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="dropdown subject" data-bs-theme="dark">
+                        <button class="btn btn-secondary dropdown-toggle disabled" type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                        <ul class="dropdown-menu">
+                        </ul>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="dropdown subject" data-bs-theme="dark">
+                        <button class="btn btn-secondary dropdown-toggle disabled" type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                        <ul class="dropdown-menu">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+    </main>
+    <footer>
+        <div class="container footer-grid">
+            <div class="row">
+                <div class="col center" style="flex-direction: column;">
+                    <p>Készítette: Zana Domán</p>
+                    <ul>
+                        <li>Neptun kód: Z17V4D</li>
+                        <li>E-mail: domanseven@gmail.com</li>
+                    </ul>
+                </div>
+                <div class="col center" style="flex-direction: column;">
+                    <p>Egyéb projektek:</p>
+                    <ul>
+                        <li><a href="http://www.sentinelpi.hu" target="_blank">Weboldal/MC modpackok</a></li>
+                        <li><a href="https://github.com/zanadoman" target="_blank">GitHub</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
