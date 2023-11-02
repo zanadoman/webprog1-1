@@ -2,6 +2,19 @@
 {
     --primary-color: rgb(26, 9, 54);
     --secondary-color: rgb(162, 146, 192);
+
+    --title1-size: 2vw;
+    --title2-size: 1.5vw;
+    --title3-size: 1.2vw;
+    --text-size: 0.9vw;
+    --small-text-size: 0.8vw;
+
+    --big-shadow: 0 1vw 1vw 0 rgba(0, 0, 0, 0.5);
+    --shadow: 0 0.3vw 0.3vw 0 rgba(0, 0, 0, 0.5);
+    --small-shadow: 0 0.2vw 0.2vw 0 rgba(0, 0, 0, 0.5);
+
+    --tight: 40vw;
+    --wide: 52vw;
 }
 
 *
@@ -25,26 +38,27 @@ body
 
 header
 {
-    margin: 0.3vw 0 0.3vw 0;
+    margin: 0.4vw 0 0.4vw 0;
 
     position: sticky;
-    top: 0.3vw;
+    top: 0.4vw;
     z-index: 999;
 }
 .navbar
 {
     width: 75vw;
     background-color: var(--primary-color);
-    box-shadow: 0 1vw 1vw 0 rgba(0, 0, 0, 0.5);
+    box-shadow: var(--big-shadow);
     border-radius: 0.5vw;
+    font-size: var(--text-size)
 }
-.dropdown-menu
+.navbar .dropdown-menu
 {
     background: rgba(26, 9, 54, 0.8);
     backdrop-filter: blur(0.5vw);
-    box-shadow: 0 1vw 1vw 0 rgba(0, 0, 0, 0.5);
+    box-shadow: var(--big-shadow);
 }
-.dropdown-item:hover
+.navbar .dropdown-item:hover
 {
     background: none;
     color: var(--secondary-color);
@@ -57,7 +71,7 @@ main
 
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(0.5vw);
-    box-shadow: 0 1vw 1vw 0 rgba(0, 0, 0, 0.5);
+    box-shadow: var(--big-shadow);
     border-radius: 1vw;
 
     display: flex;
@@ -68,12 +82,12 @@ main
 
 footer
 {
-    margin: 0.3vw 0 0.3vw 0; 
+    margin: 0.4vw 0 0.4vw 0; 
     width: 55vw;
     height: 7vw;
 
     background-color: var(--primary-color);
-    box-shadow: 0 1vw 1vw 0 rgba(0, 0, 0, 0.5);
+    box-shadow: var(--big-shadow);
     border-radius: 1vw;
 
     z-index: 998;
@@ -84,18 +98,19 @@ footer
 }
 .footer-grid
 {
-    width: 40vw;
+    width: var(--tight);
 }
 .footer-grid p
 {
     color: lightgrey;
-    font-size: 0.8vw;
+    font-size: var(--small-text-size);
+    font-weight: bold;
     margin: 0.4vw 0 0.4vw 0;
 }
 .footer-grid li
 {
     color: lightgrey;
-    font-size: 0.8vw;
+    font-size: var(--small-text-size);
     margin: 0.4vw 0 0.4vw 0;
 }
 .footer-grid a
