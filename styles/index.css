@@ -58,14 +58,14 @@
     width: var(--tight);
     color: var(--secondary-color)
 }
-.cv-grid1 h1
+.cv-grid1 h2
 {
     font-size: var(--title2-size);
     font-weight: bold;
     margin: 0.4vw 0 0.4vw 0;
     text-align: center;
 }
-.cv-grid1 h2
+.cv-grid1 h3
 {
     font-size: var(--title3-size);
     font-weight: bold;
@@ -96,7 +96,7 @@
     width: var(--tight);
     color: var(--secondary-color)
 }
-.cv-grid2 h1
+.cv-grid2 h2
 {
     font-size: var(--title2-size);
     font-weight: bold;
