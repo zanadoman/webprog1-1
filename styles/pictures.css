@@ -1,0 +1,23 @@
+:root
+{
+    --primary-color: rgb(26, 9, 54);
+    --secondary-color: rgb(162, 146, 192);
+
+    --title1-size: 2vw;
+    --title2-size: 1.5vw;
+    --title3-size: 1.2vw;
+    --text-size: 0.9vw;
+    --small-text-size: 0.8vw;
+
+    --big-shadow: 0 1vw 1vw 0 rgba(0, 0, 0, 0.5);
+    --shadow: 0 0.3vw 0.3vw 0 rgba(0, 0, 0, 0.5);
+    --small-shadow: 0 0.2vw 0.2vw 0 rgba(0, 0, 0, 0.5);
+
+    --tight: 40vw;
+    --wide: 52vw;
+}
+
+main
+{
+    height: 30vw;
+}
