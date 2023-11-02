@@ -23,6 +23,10 @@
     color: white;
     box-shadow: var(--small-shadow);
 }
+.introduction .col-2
+{
+    justify-content: right;
+}
 .introduction h1
 {
     color: white;
