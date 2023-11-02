@@ -17,32 +17,105 @@
     --wide: 52vw;
 }
 
-/*
-win1
-win2
-win3
-win 95
-win xp
-win 7
-win 8
-win 10
-win 11
-*/
-
-/*
-kde plasma
-gnome
-cinnamon
-hyprland
-i3wm
-cutefish
-mate
-xfce
-lxqt
-Enlightenment
-*/
-
-main
+h1
 {
-    height: 30vw;
+    font-size: var(--title1-size);
+    color: var(--secondary-color);
+}
+
+.galeryPicker
+{
+    width: var(--tight);
+    text-align: center;
+}
+.galeryPicker h2
+{
+    font-size: var(--title2-size);
+    color: var(--secondary-color);
+    margin: 1.2vw 0 0.8vw 0;
+}
+.galeryPicker img
+{
+    width: 12vw;
+    transform: scale(1);
+    transition: transform 250ms ease;
+}
+.galeryPicker img:hover
+{
+    transform: scale(1.1);
+    transition: transform 250ms ease;
+}
+.galeryPicker img:active
+{
+    transform: scale(1.05);
+    transition: transform 250ms ease;
+}
+.galeryPicker p
+{
+    font-size: var(--text-size);
+    color: var(--secondary-color);
+    width: 15vw;
+    margin: 0.8vw auto 0.4vw auto;
+}
+.galeryPicker button
+{
+    width: 5vw;
+    height: 2vw;
+    font-size: var(--text-size);
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    box-shadow: var(--small-shadow);
+    margin: 0.8vw 0 0.4vw 0;
+}
+.galeryPicker button:hover
+{
+    border: 1px solid white;
+    background-color: var(--primary-color);
+}
+
+.galery
+{
+    text-align: center;
+}
+.galery h3
+{
+    font-size: var(--title3-size);
+    color: var(--secondary-color);
+    margin: 1.2vw 0 0.8vw 0;
+}
+.galery img
+{
+    width: var(--tight);
+    box-shadow: var(--shadow);
+}
+
+.galerySum
+{
+    text-align: center;
+    width: var(--wide);
+}
+.galerySum p
+{
+    font-size: var(--text-size);
+    color: var(--secondary-color);
+    margin: 0.8vw 0 0.4vw 0;
+}
+.galerySum img
+{
+    width: 20vw;
+    box-shadow: var(--shadow);
+}
+
+#p1:not(:target)
+{
+    display: none;
+}
+#p2:not(:target)
+{
+    display: none;
+}
+#p3:not(:target)
+{
+    display: none;
 }
