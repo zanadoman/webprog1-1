@@ -32,6 +32,10 @@ main
     color: var(--secondary-color);
     text-align: center;
 }
+.timetable .col
+{
+    width: 9vw;
+}
 
 .subject button
 {
