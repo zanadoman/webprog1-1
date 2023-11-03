@@ -37,7 +37,6 @@
     color: var(--secondary-color);
     background-color: var(--primary-color);
     text-align: center;
-    text-decoration: underline;
 }
 .calendar th
 {
