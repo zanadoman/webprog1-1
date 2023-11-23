@@ -16,7 +16,6 @@ function loadUsers() {
         if (this.status === 200) { //Handle success
 
             var users = JSON.parse(this.response).data;
-            console.log(users)
 
             var contentString = '<table>'; //Generating content for content
             for (var i = 0; i < users.length; i++) {
@@ -34,7 +33,6 @@ function loadUsers() {
             contentString += '</table>';
 
             content.innerHTML = contentString; //Apply content
-            content.style.color = "white";
         }
     }
 

@@ -17,7 +17,7 @@
     --wide: 52vw;
 }
 
-.content
+#content
 {
     color: var(--secondary-color);
 }
