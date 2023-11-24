@@ -1,12 +1,36 @@
 var users = [];
 
-function updateAllUsers(Count) {
+var allUsersCount;
 
-    console.log(Count)
+var buttonMin;
+var buttonMax;
+
+function updateAllUsers() {
+    
+    var first;
+    var last;
     var allUsers = document.getElementById('allUsers');
 
+    if (buttonMin < 0) {
+
+        first = 0;
+        last = buttonMax;
+    }
+    else if (users.length < buttonMax) {
+
+        first = buttonMin;
+        last = users.length;
+    }
+    else
+    {
+        first = buttonMin;
+        last = buttonMax;
+    }
+    console.log(`${buttonMin} - ${buttonMax}`);
+    console.log(`${first} - ${last}`);
+
     var content = '<table>';
-    for (var i = 0; i < Count; i++) {
+    for (var i = first; i < last; i++) {
 
         content += `
             <tr>
@@ -44,7 +68,15 @@ function loadUsers() {
             }
 
             userCountSelector();
-            updateAllUsers(users.length);
+
+            buttonMin = 0;
+            buttonMax = users.length;
+            buttonPrev();
+            buttonNext();
+            updateButtons();
+
+            allUsersCount = users.length;
+            updateAllUsers();
         }
     }
 
@@ -62,8 +94,80 @@ function userCountSelector() {
     }
     selector.innerHTML = options;
 
-    selector.addEventListener("change", function(event) {
+    selector.addEventListener('change', function(event) {
 
-        updateAllUsers(event.target.value);
+        allUsersCount = event.target.value;
+        buttonMin = 0;
+        buttonMax = allUsersCount;
+        updateButtons();
+        updateAllUsers();
     });
+}
+
+function buttonPrev() {
+
+    var buttons = document.getElementsByClassName('buttonPrev');
+
+    for (var i = 0; i < buttons.length; i++) {
+
+        buttons[i].addEventListener('click', function(event) {
+
+            buttonMin = Number(buttonMin) - Number(allUsersCount);
+            buttonMax = Number(buttonMax) - Number(allUsersCount);
+            updateButtons();
+            updateAllUsers();
+        });
+    }
+}
+
+function buttonNext() {
+
+    var buttons = document.getElementsByClassName('buttonNext');
+
+    for (var i = 0; i < buttons.length; i++) {
+
+        buttons[i].addEventListener('click', function(event) {
+
+            buttonMin = Number(buttonMin) + Number(allUsersCount);
+            buttonMax = Number(buttonMax) + Number(allUsersCount);
+            updateButtons();
+            updateAllUsers();
+        });
+    }
+}
+
+function updateButtons() {
+
+    var buttonPrevs = document.getElementsByClassName('buttonPrev');
+    var buttonNexts = document.getElementsByClassName('buttonNext');
+
+    if (buttonMin <= 0) {
+
+        for (var i = 0; i < buttonPrevs.length; i++) {
+
+            buttonPrevs[i].disabled = true;
+        }
+    }
+    else {
+
+        for (var i = 0; i < buttonPrevs.length; i++) {
+
+            buttonPrevs[i].disabled = false;
+        }
+    }
+
+    if (users.length <= buttonMax) {
+
+        for (var i = 0; i < buttonNexts.length; i++) {
+
+            buttonNexts[i].disabled = true;
+        }
+    }
+    else {
+
+        for (var i = 0; i < buttonPrevs.length; i++) {
+
+            buttonNexts[i].disabled = false;
+        }
+    }
 }
