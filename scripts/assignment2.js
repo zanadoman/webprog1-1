@@ -71,8 +71,7 @@ function loadUsers() {
 
             buttonMin = 0;
             buttonMax = users.length;
-            buttonPrev();
-            buttonNext();
+            initButtons();
             updateButtons();
 
             allUsersCount = users.length;
@@ -104,13 +103,14 @@ function userCountSelector() {
     });
 }
 
-function buttonPrev() {
+function initButtons() {
 
-    var buttons = document.getElementsByClassName('buttonPrev');
+    var buttonPrevs = document.getElementsByClassName('buttonPrev');
+    var buttonNexts = document.getElementsByClassName('buttonNext');
 
-    for (var i = 0; i < buttons.length; i++) {
+    for (var i = 0; i < buttonPrevs.length; i++) {
 
-        buttons[i].addEventListener('click', function(event) {
+        buttonPrevs[i].addEventListener('click', function(event) {
 
             buttonMin = Number(buttonMin) - Number(allUsersCount);
             buttonMax = Number(buttonMax) - Number(allUsersCount);
@@ -118,15 +118,10 @@ function buttonPrev() {
             updateAllUsers();
         });
     }
-}
 
-function buttonNext() {
+    for (var i = 0; i < buttonNexts.length; i++) {
 
-    var buttons = document.getElementsByClassName('buttonNext');
-
-    for (var i = 0; i < buttons.length; i++) {
-
-        buttons[i].addEventListener('click', function(event) {
+        buttonNexts[i].addEventListener('click', function(event) {
 
             buttonMin = Number(buttonMin) + Number(allUsersCount);
             buttonMax = Number(buttonMax) + Number(allUsersCount);
