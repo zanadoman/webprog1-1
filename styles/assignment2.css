@@ -21,3 +21,83 @@ body
 {
     color: var(--secondary-color);
 }
+
+#selector
+{
+    width: 11vw;
+    height: 2vw;
+    font-size: var(--text-size);
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 0.3vw;
+    box-shadow: var(--small-shadow);
+    text-align: center;
+    appearance: none;
+}
+#selector:hover
+{
+    border: 1px solid white;
+    background-color: var(--primary-color);
+}
+
+#allUsers
+{
+    width: var(--tight);
+}
+#allUsers .avatar
+{
+    text-align: right;
+}
+#allUsers .avatar img
+{
+    border-radius: 0.5vw;
+    width: 5vw;
+    margin: 0.5vw 0 0.5vw 0;
+}
+#allUsers .data
+{
+    display: flex;
+    align-items: center;
+}
+#allUsers .buttons .row
+{
+    text-align: left;
+}
+#allUsers .buttons button
+{
+    width: 5vw;
+    height: 2vw;
+    font-size: var(--text-size);
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    box-shadow: var(--small-shadow);
+    margin: 0.3vw;
+}
+#allUsers .buttons button:hover
+{
+    border: 1px solid white;
+    background-color: var(--primary-color);
+}
+
+.pageButtons
+{
+    text-align: center;
+    width: 20vw;
+}
+.pageButtons button
+{
+    width: 6vw;
+    height: 2vw;
+    font-size: var(--text-size);
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    box-shadow: var(--small-shadow);
+}
+.pageButtons button:hover
+{
+    border: 1px solid white;
+    background-color: var(--primary-color);
+}
