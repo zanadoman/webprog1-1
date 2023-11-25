@@ -27,8 +27,8 @@ function loadUsers() {
             displayFrom = 0;
             displayTo = users.length;
             userCountSelector();
-            initButtons();
-            updateButtons();
+            initPageButtons();
+            updatePageButtons();
             updateUsers();
         }
     }
@@ -72,14 +72,16 @@ function updateUsers() {
                     </ul>
                 </div>
                 <div class="col buttons">
-                    <div class="row"><button type="button" class="btn btn-secondary refresh${i}">Frissítés</button></div>
-                    <div class="row"><button type="button" class="btn btn-secondary delete${i}">Törlés</button></div>
+                    <div class="row"><button type="button" id="refresh${i}" class="btn btn-secondary">Frissítés</button></div>
+                    <div class="row"><button type="button" id="delete${i}" class="btn btn-secondary">Törlés</button></div>
                 </div>
             </div>
         `;
     }
-
     allUsers.innerHTML = content;
+
+    initRefreshButtons(from, to);   
+    initDeleteButtons(from, to);
 }
 
 function userCountSelector() {
@@ -99,12 +101,12 @@ function userCountSelector() {
         displayCount = event.target.value;
         displayFrom = 0;
         displayTo = displayCount;
-        updateButtons();
+        updatePageButtons();
         updateUsers();
     });
 }
 
-function initButtons() {
+function initPageButtons() {
 
     var buttonPrevs = document.getElementsByClassName('buttonPrev');
     var buttonNexts = document.getElementsByClassName('buttonNext');
@@ -115,7 +117,7 @@ function initButtons() {
 
             displayFrom = Number(displayFrom) - Number(displayCount);
             displayTo = Number(displayTo) - Number(displayCount);
-            updateButtons();
+            updatePageButtons();
             updateUsers();
         });
     }
@@ -126,13 +128,13 @@ function initButtons() {
 
             displayFrom = Number(displayFrom) + Number(displayCount);
             displayTo = Number(displayTo) + Number(displayCount);
-            updateButtons();
+            updatePageButtons();
             updateUsers();
         });
     }
 }
 
-function updateButtons() {
+function updatePageButtons() {
 
     var buttonPrevs = document.getElementsByClassName('buttonPrev');
     var buttonNexts = document.getElementsByClassName('buttonNext');
@@ -169,5 +171,76 @@ function updateButtons() {
             buttonNexts[i].disabled = false;
             buttonNexts[i].classList.remove('disabled');
         }
+    }
+}
+
+function initRefreshButtons(from, to) {
+
+    var buttons = [];
+
+    for (var i = from; i < to; i++) {
+
+        buttons[i] = document.getElementById(`refresh${i}`);
+    }
+
+    for (var i = from; i < to; i++) {
+
+        buttons[i].addEventListener('click', function(event) {
+
+            for (var j = 0; j < buttons.length; j++) {
+
+                if (buttons[j] == this) {
+
+                    console.log(j);
+                }
+            }
+        });
+    }
+}
+
+function initDeleteButtons(from, to) { //törlés utáni update tönkreteszi a lapozást
+
+    var buttons = [];
+
+    for (var i = from; i < to; i++) {
+
+        buttons[i] = document.getElementById(`delete${i}`);
+    }
+
+    for (var i = from; i < to; i++) {
+
+        buttons[i].addEventListener('click', function(event) {
+
+            for (var j = 0; j < buttons.length; j++)
+            {
+                if (buttons[j] == this)
+                {
+                    var url = `https://reqres.in/api/users/${j}`;
+                    var xhr = new XMLHttpRequest();
+
+                    xhr.open('DELETE', url)
+                    xhr.onreadystatechange = function() {
+
+                        if (this.readyState !== 4) {
+
+                            return;
+                        }
+                
+                        if (this.status === 204) {
+
+                            window.alert(`Felhasználó (ID: ${users[j].id}) sikeresen törölve!`);
+                            loadUsers();
+                        }
+                        else {
+                            
+                            window.alert("Sikertelen törlés!")
+                        }
+                    }
+                    xhr.send(null);
+
+                    break;
+                }
+            }
+        });
     }
 }
