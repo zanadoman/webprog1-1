@@ -67,7 +67,7 @@ function updateUsers() {
                 <div class="col-5 data">
                     <ul>
                         <li>Azonosító: ${users[i].id}</li>
-                        <li>Név: <a id="name${i}" class="name">${users[i].last_name} ${users[i].first_name}</a></li>
+                        <li>Név: <a id="name${i}" class="name" href="#singleUser">${users[i].last_name} ${users[i].first_name}</a></li>
                         <li>E-mail: ${users[i].email}</li>
                     </ul>
                 </div>
