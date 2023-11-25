@@ -60,6 +60,7 @@ body
 {
     display: flex;
     align-items: center;
+    font-size: var(--small-text-size)
 }
 #allUsers .buttons .row
 {
@@ -133,4 +134,5 @@ body
 {
     display: flex;
     align-items: center;
+    font-size: var(--small-text-size);
 }
