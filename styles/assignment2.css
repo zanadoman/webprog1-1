@@ -64,6 +64,12 @@ body
 {
     text-align: left;
 }
+#allUsers .data .name
+{
+    text-decoration: underline;
+    cursor: pointer;
+    color: var(--secondary-color);
+}
 #allUsers .buttons button
 {
     width: 5vw;

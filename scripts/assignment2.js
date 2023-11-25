@@ -67,7 +67,7 @@ function updateUsers() {
                 <div class="col-5 data">
                     <ul>
                         <li>ID: ${users[i].id}</li>
-                        <li>Név: ${users[i].last_name} ${users[i].first_name}</li>
+                        <li>Név: <a id="name${i}" class="name">${users[i].last_name} ${users[i].first_name}</a></li>
                         <li>E-mail: ${users[i].email}</li>
                     </ul>
                 </div>
@@ -80,6 +80,7 @@ function updateUsers() {
     }
     allUsers.innerHTML = content;
 
+    initNameButtons(from, to);
     initRefreshButtons(from, to);   
     initDeleteButtons(from, to);
 }
@@ -171,6 +172,30 @@ function updatePageButtons() {
             buttonNexts[i].disabled = false;
             buttonNexts[i].classList.remove('disabled');
         }
+    }
+}
+
+function initNameButtons(from, to) {
+
+    var buttons = [];
+
+    for (var i = from; i < to; i++) {
+
+        buttons[i] = document.getElementById(`name${i}`);
+    }
+
+    for (var i = from; i < to; i++) {
+
+        buttons[i].addEventListener('click', function(event) {
+
+            for (var j = 0; j < buttons.length; j++) {
+
+                if (buttons[j] == this) {
+
+                    console.log(`user${j}`);
+                }
+            }
+        });
     }
 }
 
