@@ -54,6 +54,7 @@ body
     border-radius: 0.5vw;
     width: 5vw;
     margin: 0.5vw 0 0.5vw 0;
+    box-shadow: var(--small-shadow);
 }
 #allUsers .data
 {
@@ -106,4 +107,30 @@ body
 {
     border: 1px solid white;
     background-color: var(--primary-color);
+}
+
+#singleUser .userCard
+{
+    width: 26vw;
+    height: 10vw;
+    background-color: var(--primary-color);
+    border-radius: 1vw;
+    box-shadow: var(--shadow);
+    display: flex;
+    align-items: center;
+}
+#singleUser .userCard .container
+{
+    width: 25vw;
+    height: 8vw;
+}
+#singleUser .userCard .avatar img
+{
+    width: 8vw;
+    border-radius: 0.5vw;
+}
+#singleUser .userCard .data
+{
+    display: flex;
+    align-items: center;
 }

@@ -66,7 +66,7 @@ function updateUsers() {
                 <div class="col avatar"><img src="${users[i].avatar}"></div>
                 <div class="col-5 data">
                     <ul>
-                        <li>ID: ${users[i].id}</li>
+                        <li>Azonosító: ${users[i].id}</li>
                         <li>Név: <a id="name${i}" class="name">${users[i].last_name} ${users[i].first_name}</a></li>
                         <li>E-mail: ${users[i].email}</li>
                     </ul>
@@ -79,6 +79,7 @@ function updateUsers() {
         `;
     }
     allUsers.innerHTML = content;
+    document.getElementById('singleUser').innerHTML = '';
 
     initNameButtons(from, to);
     initRefreshButtons(from, to);   
@@ -192,7 +193,46 @@ function initNameButtons(from, to) {
 
                 if (buttons[j] == this) {
 
-                    console.log(`user${j}`);
+                    var url = `https://reqres.in/api/users/${j + 1}`;
+                    var xhr = new XMLHttpRequest();
+
+                    xhr.open('GET', url)
+                    xhr.onreadystatechange = function() {
+
+                        if (this.readyState !== 4) {
+                            return;
+                        }
+                
+                        if (this.status === 200) {
+                
+                            response = JSON.parse(this.response).data;
+                
+                            var singleUser = document.getElementById('singleUser');
+                            content = `
+                                <div class="userCard">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-4 avatar"><img src="${response.avatar}"></div>
+                                            <div class="col data">
+                                                <ul>
+                                                    <li>Azonosító: ${response.id}</li>
+                                                    <li>Név: ${response.last_name} ${response.first_name}</li>
+                                                    <li>E-mail: ${response.email}</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <div>
+                            `;
+                            singleUser.innerHTML = content;
+                        }
+                        else if (this.status === 404) {
+
+                            window.alert(`A felhasználó nem létezik vagy törölve lett.`);
+                        }
+                    }
+                
+                    xhr.send(null);
                 }
             }
         });
@@ -223,7 +263,7 @@ function initRefreshButtons(from, to) {
     }
 }
 
-function initDeleteButtons(from, to) { //törlés utáni update tönkreteszi a lapozást
+function initDeleteButtons(from, to) { //Törlés utáni update tönkreteszi a lapozást
 
     var buttons = [];
 
