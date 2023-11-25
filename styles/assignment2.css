@@ -72,6 +72,11 @@ body
     cursor: pointer;
     color: var(--secondary-color);
 }
+#allUsers .buttons
+{
+    text-align: left;
+    margin: auto;
+}
 #allUsers .buttons button
 {
     width: 5vw;

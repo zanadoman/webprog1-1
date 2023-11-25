@@ -18,7 +18,7 @@ function loadUsers() {
 
         if (this.status === 200) {
 
-            response = JSON.parse(this.response).data;
+            var response = JSON.parse(this.response).data;
 
             for (var i = 0; i < response.length; i++) {
                 users[i] = response[i]
@@ -72,12 +72,33 @@ function updateUsers() {
                     </ul>
                 </div>
                 <div class="col buttons">
-                    <div class="row"><button type="button" id="refresh${i}" class="btn btn-secondary">Frissítés</button></div>
-                    <div class="row"><button type="button" id="delete${i}" class="btn btn-secondary">Törlés</button></div>
+                    <button type="button" id="refresh${i}" class="btn btn-secondary">Frissítés</button>
+                    <button type="button" id="delete${i}" class="btn btn-secondary">Törlés</button>
                 </div>
             </div>
         `;
     }
+    content += `
+        <br>
+        <div class="row>
+            <form action="https://reqres.in/api/users" method="POST">
+                <fieldset>
+                    <legend>Új felhasználó</legend>
+                    <div class="row">
+                        <div class="col">
+                            <label for="name">Név</label>
+                            <input type="text" id="name" name="name" placeholder="Név" required>
+                        </div>
+                        <div class="col">
+                            <label for="job">Munkakör</label>
+                            <input type="text" id="job" name="job" placeholder="Munkakör" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                </fieldset>
+            </from>
+        </div>
+    `;
     allUsers.innerHTML = content;
     document.getElementById('singleUser').innerHTML = '';
 
@@ -205,7 +226,7 @@ function initNameButtons(from, to) {
                 
                         if (this.status === 200) {
                 
-                            response = JSON.parse(this.response).data;
+                            var response = JSON.parse(this.response).data;
                 
                             var singleUser = document.getElementById('singleUser');
                             content = `
@@ -231,8 +252,9 @@ function initNameButtons(from, to) {
                             window.alert(`A felhasználó nem létezik vagy törölve lett.`);
                         }
                     }
-                
                     xhr.send(null);
+
+                    break;
                 }
             }
         });
@@ -256,7 +278,36 @@ function initRefreshButtons(from, to) {
 
                 if (buttons[j] == this) {
 
-                    console.log(j);
+                    var name = window.prompt("Név:");
+                    var job = window.prompt("Munkakör:");
+                    console.log(name);
+                    console.log(job);
+
+                    var message = `{
+                        "name": "${name}",
+                        "job": "${job}"
+                    }`;
+
+                    var url = `https://reqres.in/api/users/${j + 1}`;
+                    var xhr = new XMLHttpRequest();
+
+                    xhr.open('PUT', url);
+                    xhr.onreadystatechange = function() {
+
+                        if (this.readyState !== 4) {
+
+                            return;
+                        }
+
+                        if (this.status === 200) {
+
+                            var response = JSON.parse(this.response);
+                            console.log(response);
+                        }
+                    }
+                    xhr.send(JSON.parse(message));
+
+                    break;
                 }
             }
         });
