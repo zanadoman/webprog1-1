@@ -94,6 +94,49 @@ body
     background-color: var(--primary-color);
 }
 
+#newUser
+{
+    width: var(--tight);
+}
+#newUser h2
+{
+    font-size: var(--title2-size);
+    font-weight: bold;
+    text-align: center;
+}
+#newUser .label
+{
+    font-size: var(--text-size);
+    text-align: right;
+    margin: 0.3vw;
+}
+#newUser .input
+{
+    text-align: right;
+}
+#newUser .input input
+{
+    border-radius: 0.3vw;
+    height: 2vw;
+    margin: 0.3vw;
+}
+#newUser button
+{
+    width: 7.5vw;
+    height: 2vw;
+    font-size: var(--text-size);
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    box-shadow: var(--small-shadow);
+    margin: 0.3vw;
+}
+#newUser button:hover
+{
+    border: 1px solid white;
+    background-color: var(--primary-color);
+}
+
 .pageButtons
 {
     text-align: center;

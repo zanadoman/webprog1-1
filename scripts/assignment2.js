@@ -29,6 +29,7 @@ function loadUsers() {
             userCountSelector();
             initPageButtons();
             updatePageButtons();
+            initNewUser();
             updateUsers();
         }
     }
@@ -78,27 +79,6 @@ function updateUsers() {
             </div>
         `;
     }
-    content += `
-        <br>
-        <div class="row>
-            <form action="https://reqres.in/api/users" method="POST">
-                <fieldset>
-                    <legend>Új felhasználó</legend>
-                    <div class="row">
-                        <div class="col">
-                            <label for="name">Név</label>
-                            <input type="text" id="name" name="name" placeholder="Név" required>
-                        </div>
-                        <div class="col">
-                            <label for="job">Munkakör</label>
-                            <input type="text" id="job" name="job" placeholder="Munkakör" required>
-                        </div>
-                    </div>
-                    <div class="row">
-                </fieldset>
-            </from>
-        </div>
-    `;
     allUsers.innerHTML = content;
     document.getElementById('singleUser').innerHTML = '';
 
@@ -334,7 +314,7 @@ function initDeleteButtons(from, to) { //Törlés utáni update tönkreteszi a l
                     var url = `https://reqres.in/api/users/${j}`;
                     var xhr = new XMLHttpRequest();
 
-                    xhr.open('DELETE', url)
+                    xhr.open('DELETE', url);
                     xhr.onreadystatechange = function() {
 
                         if (this.readyState !== 4) {
@@ -359,4 +339,15 @@ function initDeleteButtons(from, to) { //Törlés utáni update tönkreteszi a l
             }
         });
     }
+}
+
+function initNewUser() {
+
+    var form = document.getElementById('newUserForm');
+    var formData = new FormData(form);
+
+    form.addEventListener('submit', function(event) {
+
+        window.alert(formData);
+    });
 }
