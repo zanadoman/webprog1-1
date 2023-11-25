@@ -74,7 +74,6 @@ function loadUsers() {
             initButtons();
             updateButtons();
 
-            allUsersCount = users.length;
             updateAllUsers();
         }
     }
@@ -93,6 +92,7 @@ function userCountSelector() {
     }
     selector.innerHTML = options;
 
+    allUsersCount = users.length;
     selector.addEventListener('change', function(event) {
 
         allUsersCount = event.target.value;
