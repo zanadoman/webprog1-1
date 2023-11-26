@@ -45,6 +45,14 @@ body
 {
     width: var(--tight);
 }
+#allUsers .loading
+{
+    text-align: center;
+}
+#allUsers .loading img
+{
+    width: 5vw;
+}
 #allUsers .avatar
 {
     text-align: right;
