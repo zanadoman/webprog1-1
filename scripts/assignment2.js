@@ -6,10 +6,8 @@ var displayTo;
 
 function loadUsers() {
 
-    var url = 'https://reqres.in/api/users';
     var xhr = new XMLHttpRequest();
-
-    xhr.open('GET', url);
+    xhr.open('GET', 'https://reqres.in/api/users');
     xhr.onreadystatechange = function() {
 
         if (this.readyState !== 4) {
@@ -59,6 +57,9 @@ function updateUsers() {
         to = displayTo;
     }
 
+    console.log(`from: ${from}, to: ${to}`);
+    console.log(`displayFrom: ${displayFrom}, displayTo: ${displayTo}`);
+
     var content = '';
     for (var i = from; i < to; i++) {
 
@@ -94,7 +95,7 @@ function userCountSelector() {
     var options = `<option value="${users.length}">Összes felhasználó</option>`;
     for (var i = 0; i < users.length - 1; i++) {
 
-        options += `<option value="${i + 1}">${i + 1}db felhasználó</option>`
+        options += `<option value="${i + 1}">${i + 1}db felhasználó</option>`;
     }
     selector.innerHTML = options;
 
@@ -194,10 +195,8 @@ function initNameButtons(from, to) {
 
                 if (buttons[j] == this) {
 
-                    var url = `https://reqres.in/api/users/${j + 1}`;
                     var xhr = new XMLHttpRequest();
-
-                    xhr.open('GET', url)
+                    xhr.open('GET', `https://reqres.in/api/users/${j + 1}`);
                     xhr.onreadystatechange = function() {
 
                         if (this.readyState !== 4) {
@@ -241,7 +240,7 @@ function initNameButtons(from, to) {
     }
 }
 
-function initRefreshButtons(from, to) {
+function initRefreshButtons(from, to) { //Nem működik és mindenre 200-at ad
 
     var buttons = [];
 
@@ -268,10 +267,8 @@ function initRefreshButtons(from, to) {
                         "job": "${job}"
                     }`;
 
-                    var url = `https://reqres.in/api/users/${j + 1}`;
                     var xhr = new XMLHttpRequest();
-
-                    xhr.open('PUT', url);
+                    xhr.open('PUT', `https://reqres.in/api/users/${j + 1}`);
                     xhr.onreadystatechange = function() {
 
                         if (this.readyState !== 4) {
@@ -309,12 +306,10 @@ function initDeleteButtons(from, to) { //Törlés utáni update tönkreteszi a l
 
             for (var j = 0; j < buttons.length; j++)
             {
-                if (buttons[j] == this)
-                {
-                    var url = `https://reqres.in/api/users/${j}`;
-                    var xhr = new XMLHttpRequest();
+                if (buttons[j] == this) {
 
-                    xhr.open('DELETE', url);
+                    var xhr = new XMLHttpRequest();
+                    xhr.open('DELETE', `https://reqres.in/api/users/${j}`);
                     xhr.onreadystatechange = function() {
 
                         if (this.readyState !== 4) {
@@ -322,14 +317,14 @@ function initDeleteButtons(from, to) { //Törlés utáni update tönkreteszi a l
                             return;
                         }
                 
-                        if (this.status === 204) {
+                        if (this.status === 204) { //Mindenre 204-et responsol
 
                             window.alert(`Felhasználó (ID: ${users[j].id}) sikeresen törölve!`);
-                            loadUsers();
+                            location.reload();
                         }
                         else {
                             
-                            window.alert("Sikertelen törlés!")
+                            window.alert("Sikertelen törlés!");
                         }
                     }
                     xhr.send(null);
@@ -341,7 +336,7 @@ function initDeleteButtons(from, to) { //Törlés utáni update tönkreteszi a l
     }
 }
 
-function initNewUser() {
+function initNewUser() { //Ötletem sincs
 
     var form = document.getElementById('newUserForm');
     var formData = new FormData(form);
