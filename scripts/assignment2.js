@@ -291,7 +291,7 @@ function initRefreshButtons(from, to) { //Nem működik és mindenre 200-at ad
     }
 }
 
-function initDeleteButtons(from, to) { //Törlés utáni update tönkreteszi a lapozást
+function initDeleteButtons(from, to) {
 
     var buttons = [];
 
