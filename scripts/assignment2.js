@@ -30,6 +30,10 @@ function loadUsers() {
             initNewUser();
             updateUsers();
         }
+        else {
+
+            console.log('User loading error: ' + this.status);
+        }
     }
 
     xhr.send(null);
@@ -227,6 +231,10 @@ function initNameButtons(from, to) {
 
                             window.alert(`A felhasználó nem létezik vagy törölve lett.`);
                         }
+                        else {
+
+                            console.log('User card loading error: ' + this.status);
+                        }
                     }
                     xhr.send(null);
 
@@ -278,6 +286,7 @@ function initRefreshButtons(from, to) {
                         }
                         else {
 
+                            console.log('User refresh error: ' + this.status);
                             window.alert('A felhasználót nem sikerült frissíteni!');
                         }
                     }
@@ -323,6 +332,7 @@ function initDeleteButtons(from, to) {
                         }
                         else {
                             
+                            console.log('User deteletion error: ' + this.status);
                             window.alert("Sikertelen törlés!");
                         }
                     }
@@ -367,6 +377,7 @@ function initNewUser() {
             }
             else {
 
+                console.log('User creation error: ' + this.status);
                 window.alert('A felhasználót nem sikerült létrehozni!');
             }
         }
