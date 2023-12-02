@@ -20,7 +20,7 @@ function loadUsers() {
 
             for (var i = 0; i < response.length; i++) {
                 
-                users[i] = response[i]
+                users[i] = response[i];
             }
 
             displayFrom = 0;
@@ -36,7 +36,6 @@ function loadUsers() {
             console.log('User loading error: ' + this.status);
         }
     }
-
     xhr.send(null);
 }
 
@@ -283,7 +282,7 @@ function initRefreshButtons(from, to) {
 
                         if (this.status === 200) {
 
-                            window.alert('Sikeres frissítés!')
+                            window.alert('Sikeres frissítés!');
                         }
                         else {
 
