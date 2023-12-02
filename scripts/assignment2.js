@@ -19,6 +19,7 @@ function loadUsers() {
             var response = JSON.parse(this.response).data;
 
             for (var i = 0; i < response.length; i++) {
+                
                 users[i] = response[i]
             }
 
@@ -85,7 +86,7 @@ function updateUsers() {
     document.getElementById('singleUser').innerHTML = '';
 
     initNameButtons(from, to);
-    initRefreshButtons(from, to);   
+    initRefreshButtons(from, to);
     initDeleteButtons(from, to);
 }
 
