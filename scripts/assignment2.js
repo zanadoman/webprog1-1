@@ -263,7 +263,15 @@ function initRefreshButtons(from, to) {
                 if (buttons[j] == this) {
 
                     var userName = window.prompt("Név:");
+                    if (!userName) {
+
+                        break;
+                    }
                     var userJob = window.prompt("Munkakör:");
+                    if (!userJob) {
+
+                        break;
+                    }
 
                     var user = {
 
@@ -283,6 +291,7 @@ function initRefreshButtons(from, to) {
                         if (this.status === 200) {
 
                             window.alert('Sikeres frissítés!');
+                            location.reload();
                         }
                         else {
 
@@ -374,6 +383,7 @@ function initNewUser() {
             if (this.status === 201) {
 
                 window.alert('Felhasználó sikeresen létrehozva!');
+                location.reload();
             }
             else {
 
