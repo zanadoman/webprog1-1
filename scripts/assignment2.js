@@ -57,9 +57,6 @@ function updateUsers() {
         to = displayTo;
     }
 
-    console.log(`from: ${from}, to: ${to}`);
-    console.log(`displayFrom: ${displayFrom}, displayTo: ${displayTo}`);
-
     var content = '';
     for (var i = from; i < to; i++) {
 
@@ -240,7 +237,7 @@ function initNameButtons(from, to) {
     }
 }
 
-function initRefreshButtons(from, to) { //Nem működik és mindenre 200-at ad
+function initRefreshButtons(from, to) {
 
     var buttons = [];
 
@@ -257,15 +254,14 @@ function initRefreshButtons(from, to) { //Nem működik és mindenre 200-at ad
 
                 if (buttons[j] == this) {
 
-                    var name = window.prompt("Név:");
-                    var job = window.prompt("Munkakör:");
-                    console.log(name);
-                    console.log(job);
+                    var userName = window.prompt("Név:");
+                    var userJob = window.prompt("Munkakör:");
 
-                    var message = `{
-                        "name": "${name}",
-                        "job": "${job}"
-                    }`;
+                    var user = {
+
+                        name: userName,
+                        job: userJob
+                    }
 
                     var xhr = new XMLHttpRequest();
                     xhr.open('PUT', `https://reqres.in/api/users/${j + 1}`);
@@ -278,11 +274,14 @@ function initRefreshButtons(from, to) { //Nem működik és mindenre 200-at ad
 
                         if (this.status === 200) {
 
-                            var response = JSON.parse(this.response);
-                            console.log(response);
+                            window.alert('Sikeres frissítés!')
+                        }
+                        else {
+
+                            window.alert('A felhasználót nem sikerült frissíteni!');
                         }
                     }
-                    xhr.send(JSON.parse(message));
+                    xhr.send(JSON.stringify(user));
 
                     break;
                 }
@@ -317,7 +316,7 @@ function initDeleteButtons(from, to) {
                             return;
                         }
                 
-                        if (this.status === 204) { //Mindenre 204-et responsol
+                        if (this.status === 204) {
 
                             window.alert(`Felhasználó (ID: ${users[j].id}) sikeresen törölve!`);
                             location.reload();
@@ -336,13 +335,41 @@ function initDeleteButtons(from, to) {
     }
 }
 
-function initNewUser() { //Ötletem sincs
+function initNewUser() {
 
     var form = document.getElementById('newUserForm');
-    var formData = new FormData(form);
 
-    form.addEventListener('submit', function(event) {
+    form.addEventListener('submit', function(event){
 
-        window.alert(formData);
+        event.preventDefault();
+
+        var userName = document.getElementById('name').value;
+        var userJob = document.getElementById('job').value;
+
+        var user = {
+
+            name: userName,
+            job: userJob
+        };
+
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', 'https://reqres.in/api/users');
+        xhr.onreadystatechange = function() {
+
+            if (this.readyState !== 4) {
+
+                return;
+            }
+
+            if (this.status === 201) {
+
+                window.alert('Felhasználó sikeresen létrehozva!');
+            }
+            else {
+
+                window.alert('A felhasználót nem sikerült létrehozni!');
+            }
+        }
+        xhr.send(JSON.stringify(user));
     });
 }
